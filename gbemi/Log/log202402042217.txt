@@ -1,0 +1,35 @@
+2024-02-04 22:17:07.847 +01:00 [INF] User profile is available. Using 'C:\Users\MY PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-04 22:17:08.369 +01:00 [INF] Now listening on: https://localhost:7269
+2024-02-04 22:17:08.369 +01:00 [INF] Now listening on: http://localhost:5223
+2024-02-04 22:17:08.373 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-04 22:17:08.374 +01:00 [INF] Hosting environment: Development
+2024-02-04 22:17:08.374 +01:00 [INF] Content root path: C:\Users\MY PC\source\repos\gbemi\gbemi
+2024-02-04 22:17:15.139 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7269/swagger/index.html - -
+2024-02-04 22:17:15.732 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7269/swagger/index.html - - - 200 - text/html;charset=utf-8 598.1358ms
+2024-02-04 22:17:15.818 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7269/_framework/aspnetcore-browser-refresh.js - -
+2024-02-04 22:17:15.890 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7269/_framework/aspnetcore-browser-refresh.js - - - 200 11980 application/javascript;+charset=utf-8 72.4505ms
+2024-02-04 22:17:15.915 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7269/_vs/browserLink - -
+2024-02-04 22:17:16.076 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7269/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 160.9977ms
+2024-02-04 22:17:16.197 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7269/swagger/v1/swagger.json - -
+2024-02-04 22:17:16.598 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7269/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 400.8182ms
+2024-02-04 22:17:23.535 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7269/api/User/send-reset-email/rose@example.com - -
+2024-02-04 22:17:23.544 +01:00 [INF] CORS policy execution successful.
+2024-02-04 22:17:23.546 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7269/api/User/send-reset-email/rose@example.com - - - 204 - - 11.2121ms
+2024-02-04 22:17:23.548 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7269/api/User/send-reset-email/rose@example.com application/json 2
+2024-02-04 22:17:23.551 +01:00 [INF] CORS policy execution successful.
+2024-02-04 22:17:23.643 +01:00 [INF] Executing endpoint 'gbemi.Controllers.UserController.SendEmail (gbemi)'
+2024-02-04 22:17:23.702 +01:00 [INF] Route matched with {action = "SendEmail", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SendEmail(System.String) on controller gbemi.Controllers.UserController (gbemi).
+2024-02-04 22:17:25.870 +01:00 [INF] Executed DbCommand (64ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[ConfirmPassword], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[ResetPasswordExpiry], [u].[ResetPasswordToken], [u].[Role], [u].[Token], [u].[UserName]
+FROM [users] AS [u]
+WHERE [u].[Email] = @__email_0
+2024-02-04 22:17:26.155 +01:00 [INF] Executed DbCommand (18ms) [Parameters=[@p10='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [users] SET [ConfirmPassword] = @p0, [Email] = @p1, [FirstName] = @p2, [LastName] = @p3, [Password] = @p4, [ResetPasswordExpiry] = @p5, [ResetPasswordToken] = @p6, [Role] = @p7, [Token] = @p8, [UserName] = @p9
+OUTPUT 1
+WHERE [Id] = @p10;
+2024-02-04 22:17:28.806 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-04 22:17:28.829 +01:00 [INF] Executed action gbemi.Controllers.UserController.SendEmail (gbemi) in 5123.4449ms
+2024-02-04 22:17:28.830 +01:00 [INF] Executed endpoint 'gbemi.Controllers.UserController.SendEmail (gbemi)'
+2024-02-04 22:17:28.847 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7269/api/User/send-reset-email/rose@example.com application/json 2 - 200 - application/json;+charset=utf-8 5298.6987ms

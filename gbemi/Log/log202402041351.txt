@@ -1,0 +1,26 @@
+2024-02-04 13:51:02.564 +01:00 [INF] User profile is available. Using 'C:\Users\MY PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-04 13:51:03.067 +01:00 [INF] Now listening on: https://localhost:7269
+2024-02-04 13:51:03.068 +01:00 [INF] Now listening on: http://localhost:5223
+2024-02-04 13:51:03.071 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-04 13:51:03.079 +01:00 [INF] Hosting environment: Development
+2024-02-04 13:51:03.079 +01:00 [INF] Content root path: C:\Users\MY PC\source\repos\gbemi\gbemi
+2024-02-04 13:51:03.723 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7269/swagger/index.html - -
+2024-02-04 13:51:04.401 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7269/swagger/index.html - - - 200 - text/html;charset=utf-8 683.0829ms
+2024-02-04 13:51:04.549 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7269/_vs/browserLink - -
+2024-02-04 13:51:04.549 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7269/_framework/aspnetcore-browser-refresh.js - -
+2024-02-04 13:51:04.583 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7269/_framework/aspnetcore-browser-refresh.js - - - 200 11980 application/javascript;+charset=utf-8 33.5880ms
+2024-02-04 13:51:04.843 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7269/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 293.3084ms
+2024-02-04 13:51:05.121 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7269/swagger/v1/swagger.json - -
+2024-02-04 13:51:05.521 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7269/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 400.8633ms
+2024-02-04 13:51:18.273 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7269/api/User/authenticate application/json 52
+2024-02-04 13:51:18.284 +01:00 [INF] CORS policy execution successful.
+2024-02-04 13:51:18.448 +01:00 [INF] Executing endpoint 'gbemi.Controllers.UserController.Authenticate (gbemi)'
+2024-02-04 13:51:18.543 +01:00 [INF] Route matched with {action = "Authenticate", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authenticate(gbemi.Models.LoginDTO) on controller gbemi.Controllers.UserController (gbemi).
+2024-02-04 13:51:21.497 +01:00 [INF] Executed DbCommand (115ms) [Parameters=[@__uname_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[ConfirmPassword], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[ResetPasswordExpiry], [u].[ResetPasswordToken], [u].[Role], [u].[Token], [u].[UserName]
+FROM [users] AS [u]
+WHERE [u].[UserName] = @__uname_0
+2024-02-04 13:51:21.720 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[gbemi.Models.LoginDTO, gbemi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-04 13:51:21.760 +01:00 [INF] Executed action gbemi.Controllers.UserController.Authenticate (gbemi) in 3209.2769ms
+2024-02-04 13:51:21.762 +01:00 [INF] Executed endpoint 'gbemi.Controllers.UserController.Authenticate (gbemi)'
+2024-02-04 13:51:21.783 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7269/api/User/authenticate application/json 52 - 200 - application/json;+charset=utf-8 3510.4246ms

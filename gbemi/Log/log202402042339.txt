@@ -1,0 +1,21 @@
+2024-02-04 23:39:02.840 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7269/api/User/send-reset-email/ebubeashibuogwu@gmail.com - -
+2024-02-04 23:39:02.855 +01:00 [INF] CORS policy execution successful.
+2024-02-04 23:39:02.859 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7269/api/User/send-reset-email/ebubeashibuogwu@gmail.com - - - 204 - - 19.4916ms
+2024-02-04 23:39:02.863 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7269/api/User/send-reset-email/ebubeashibuogwu@gmail.com application/json 2
+2024-02-04 23:39:02.867 +01:00 [INF] CORS policy execution successful.
+2024-02-04 23:39:02.967 +01:00 [INF] Executing endpoint 'gbemi.Controllers.UserController.SendEmail (gbemi)'
+2024-02-04 23:39:03.040 +01:00 [INF] Route matched with {action = "SendEmail", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SendEmail(System.String) on controller gbemi.Controllers.UserController (gbemi).
+2024-02-04 23:39:05.393 +01:00 [INF] Executed DbCommand (69ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[ConfirmPassword], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[ResetPasswordExpiry], [u].[ResetPasswordToken], [u].[Role], [u].[Token], [u].[UserName]
+FROM [users] AS [u]
+WHERE [u].[Email] = @__email_0
+2024-02-04 23:39:05.759 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[@p10='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [users] SET [ConfirmPassword] = @p0, [Email] = @p1, [FirstName] = @p2, [LastName] = @p3, [Password] = @p4, [ResetPasswordExpiry] = @p5, [ResetPasswordToken] = @p6, [Role] = @p7, [Token] = @p8, [UserName] = @p9
+OUTPUT 1
+WHERE [Id] = @p10;
+2024-02-04 23:39:07.602 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-04 23:39:07.625 +01:00 [INF] Executed action gbemi.Controllers.UserController.SendEmail (gbemi) in 4577.7489ms
+2024-02-04 23:39:07.626 +01:00 [INF] Executed endpoint 'gbemi.Controllers.UserController.SendEmail (gbemi)'
+2024-02-04 23:39:07.641 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7269/api/User/send-reset-email/ebubeashibuogwu@gmail.com application/json 2 - 200 - application/json;+charset=utf-8 4778.6112ms

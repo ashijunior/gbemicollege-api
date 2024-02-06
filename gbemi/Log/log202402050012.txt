@@ -1,0 +1,36 @@
+2024-02-05 00:12:05.481 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7269/api/User/reset-password/ - -
+2024-02-05 00:12:05.496 +01:00 [INF] CORS policy execution successful.
+2024-02-05 00:12:05.501 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7269/api/User/reset-password/ - - - 204 - - 19.7170ms
+2024-02-05 00:12:05.503 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7269/api/User/reset-password/ application/json 97
+2024-02-05 00:12:05.508 +01:00 [INF] CORS policy execution successful.
+2024-02-05 00:12:05.602 +01:00 [INF] Executing endpoint 'gbemi.Controllers.UserController.ResetPassword (gbemi)'
+2024-02-05 00:12:05.652 +01:00 [INF] Route matched with {action = "ResetPassword", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ResetPassword(gbemi.Models.ResetPasswordDTO) on controller gbemi.Controllers.UserController (gbemi).
+2024-02-05 00:12:07.796 +01:00 [INF] Executed DbCommand (71ms) [Parameters=[@__resetPasswordDTO_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[ConfirmPassword], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[ResetPasswordExpiry], [u].[ResetPasswordToken], [u].[Role], [u].[Token], [u].[UserName]
+FROM [users] AS [u]
+WHERE [u].[Email] = @__resetPasswordDTO_Email_0
+2024-02-05 00:12:08.227 +01:00 [INF] Executed DbCommand (20ms) [Parameters=[@p10='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [users] SET [ConfirmPassword] = @p0, [Email] = @p1, [FirstName] = @p2, [LastName] = @p3, [Password] = @p4, [ResetPasswordExpiry] = @p5, [ResetPasswordToken] = @p6, [Role] = @p7, [Token] = @p8, [UserName] = @p9
+OUTPUT 1
+WHERE [Id] = @p10;
+2024-02-05 00:12:08.260 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-05 00:12:08.279 +01:00 [INF] Executed action gbemi.Controllers.UserController.ResetPassword (gbemi) in 2622.6568ms
+2024-02-05 00:12:08.280 +01:00 [INF] Executed endpoint 'gbemi.Controllers.UserController.ResetPassword (gbemi)'
+2024-02-05 00:12:08.295 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7269/api/User/reset-password/ application/json 97 - 200 - application/json;+charset=utf-8 2791.8157ms
+2024-02-05 00:12:21.955 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7269/api/User/authenticate - -
+2024-02-05 00:12:21.957 +01:00 [INF] CORS policy execution successful.
+2024-02-05 00:12:21.957 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7269/api/User/authenticate - - - 204 - - 1.6274ms
+2024-02-05 00:12:21.960 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7269/api/User/authenticate application/json 44
+2024-02-05 00:12:21.960 +01:00 [INF] CORS policy execution successful.
+2024-02-05 00:12:21.962 +01:00 [INF] Executing endpoint 'gbemi.Controllers.UserController.Authenticate (gbemi)'
+2024-02-05 00:12:21.968 +01:00 [INF] Route matched with {action = "Authenticate", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authenticate(gbemi.Models.LoginDTO) on controller gbemi.Controllers.UserController (gbemi).
+2024-02-05 00:12:22.026 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[@__uname_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[ConfirmPassword], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[ResetPasswordExpiry], [u].[ResetPasswordToken], [u].[Role], [u].[Token], [u].[UserName]
+FROM [users] AS [u]
+WHERE [u].[UserName] = @__uname_0
+2024-02-05 00:12:22.047 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[gbemi.Models.LoginDTO, gbemi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-05 00:12:22.052 +01:00 [INF] Executed action gbemi.Controllers.UserController.Authenticate (gbemi) in 83.3797ms
+2024-02-05 00:12:22.052 +01:00 [INF] Executed endpoint 'gbemi.Controllers.UserController.Authenticate (gbemi)'
+2024-02-05 00:12:22.053 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7269/api/User/authenticate application/json 44 - 200 - application/json;+charset=utf-8 93.4814ms
