@@ -15,9 +15,13 @@ namespace gbemi.Contexts
 
         public DbSet<User> Users { get; set; }
 
+        public DbSet<Contact> Contacts { get; set; } // Add this line to define the Contacts DbSet
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>().ToTable("users");
+
+            modelBuilder.Entity<Contact>().ToTable("contacts");
         }
     }
 }

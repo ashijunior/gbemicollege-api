@@ -16,7 +16,7 @@ namespace gbemi.UtilityService
         {
             var emailMessage = new MimeMessage();
             var from = _config["EmailSettings:From"];
-            emailMessage.From.Add(new MailboxAddress("Lets Program", from));
+            emailMessage.From.Add(new MailboxAddress("We're Dad", from));
             emailMessage.To.Add(new MailboxAddress(emailModel.To, emailModel.To));
             emailMessage.Subject = emailModel.Subject;
             emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html)

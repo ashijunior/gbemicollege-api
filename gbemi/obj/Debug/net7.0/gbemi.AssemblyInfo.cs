@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("gbemi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16cd0a44124b85f3f733c0e84af056c17a9581fd")]
 [assembly: System.Reflection.AssemblyProductAttribute("gbemi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("gbemi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

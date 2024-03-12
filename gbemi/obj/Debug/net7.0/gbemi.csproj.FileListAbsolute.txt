@@ -152,3 +152,4 @@ C:\Users\MY PC\source\repos\gbemi\gbemi\bin\Debug\net7.0\MailKit.dll
 C:\Users\MY PC\source\repos\gbemi\gbemi\bin\Debug\net7.0\MimeKit.dll
 C:\Users\MY PC\source\repos\gbemi\gbemi\bin\Debug\net7.0\NETCore.MailKit.dll
 C:\Users\MY PC\source\repos\gbemi\gbemi\bin\Debug\net7.0\BouncyCastle.Crypto.dll
+C:\Users\MY PC\source\repos\gbemi\gbemi\obj\Debug\net7.0\gbemi.sourcelink.json

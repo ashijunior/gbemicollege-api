@@ -1,0 +1,32 @@
+2024-03-11 22:27:46.293 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7269/api/User/authenticate - -
+2024-03-11 22:27:46.311 +01:00 [INF] CORS policy execution successful.
+2024-03-11 22:27:46.312 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7269/api/User/authenticate - - - 204 - - 19.7435ms
+2024-03-11 22:27:46.316 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7269/api/User/authenticate application/json 63
+2024-03-11 22:27:46.316 +01:00 [INF] CORS policy execution successful.
+2024-03-11 22:27:46.316 +01:00 [INF] Executing endpoint 'gbemi.Controllers.UserController.Authenticate (gbemi)'
+2024-03-11 22:27:46.317 +01:00 [INF] Route matched with {action = "Authenticate", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authenticate(gbemi.Models.LoginDTO) on controller gbemi.Controllers.UserController (gbemi).
+2024-03-11 22:27:46.322 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__uname_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[ConfirmPassword], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[ResetPasswordExpiry], [u].[ResetPasswordToken], [u].[Role], [u].[Token], [u].[UserName]
+FROM [users] AS [u]
+WHERE [u].[UserName] = @__uname_0
+2024-03-11 22:27:46.329 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[gbemi.Models.LoginDTO, gbemi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-11 22:27:46.329 +01:00 [INF] Executed action gbemi.Controllers.UserController.Authenticate (gbemi) in 12.4991ms
+2024-03-11 22:27:46.329 +01:00 [INF] Executed endpoint 'gbemi.Controllers.UserController.Authenticate (gbemi)'
+2024-03-11 22:27:46.329 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7269/api/User/authenticate application/json 63 - 200 - application/json;+charset=utf-8 13.5415ms
+2024-03-11 22:27:54.333 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7269/api/Contact - -
+2024-03-11 22:27:54.333 +01:00 [INF] CORS policy execution successful.
+2024-03-11 22:27:54.333 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7269/api/Contact - - - 204 - - 0.4065ms
+2024-03-11 22:27:54.337 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7269/api/Contact application/json 35
+2024-03-11 22:27:54.337 +01:00 [INF] CORS policy execution successful.
+2024-03-11 22:27:54.337 +01:00 [INF] Executing endpoint 'gbemi.Controllers.ContactController.Post (gbemi)'
+2024-03-11 22:27:54.337 +01:00 [INF] Route matched with {action = "Post", controller = "Contact"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(gbemi.Models.Contact) on controller gbemi.Controllers.ContactController (gbemi).
+2024-03-11 22:27:54.350 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [contacts] ([CreatedAt], [Email], [Message], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2024-03-11 22:27:56.226 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-11 22:27:56.227 +01:00 [INF] Executed action gbemi.Controllers.ContactController.Post (gbemi) in 1889.5106ms
+2024-03-11 22:27:56.227 +01:00 [INF] Executed endpoint 'gbemi.Controllers.ContactController.Post (gbemi)'
+2024-03-11 22:27:56.227 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7269/api/Contact application/json 35 - 200 - application/json;+charset=utf-8 1890.1762ms

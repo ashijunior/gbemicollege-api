@@ -17,6 +17,10 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 using gbemi.UtilityService;
+using System.Net;
+//using System.Data.Entity;
+
+
 
 namespace gbemi.Controllers
 {
@@ -26,18 +30,16 @@ namespace gbemi.Controllers
     {
         private readonly IUserRepo _userRepo;
         private readonly AppDbContext _context;
-        private readonly IConfiguration _configuration;
         private readonly IEmailService _emailService;
         private readonly ILogger<UserController> _logger;
         private readonly IMapper _mapper;
 
-        public UserController(ILogger<UserController> logger, IMapper mapper, IUserRepo userRepo, AppDbContext context, IConfiguration configuration, IEmailService emailService)
+        public UserController(ILogger<UserController> logger, IMapper mapper, IUserRepo userRepo, AppDbContext context, IEmailService emailService)
         {
             _logger = logger;
             _mapper = mapper;
             _userRepo = userRepo;
             _context = context;
-            _configuration = configuration;
             _emailService = emailService;
         }
 
@@ -298,6 +300,8 @@ namespace gbemi.Controllers
                 return StatusCode(500, "An error occurred while resetting the password.");
             }
         }
+
+                 
 
     }
 }
